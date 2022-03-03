@@ -21,6 +21,7 @@ import {
   doToggle3PAnalytics,
   doUpdateDownloadProgress,
   doNotifyUpdateAvailable,
+  doShowUpgradeInstallationError,
 } from 'redux/actions/app';
 import { isURIValid } from 'util/lbryURI';
 import { setSearchApi } from 'redux/actions/search';
@@ -132,6 +133,10 @@ ipcRenderer.on('open-uri-requested', (event, url, newSession) => {
 
 autoUpdater.on('update-available', (e) => {
   app.store.dispatch(doNotifyUpdateAvailable(e));
+});
+
+ipcRenderer.on('upgrade-installing-error', () => {
+  app.store.dispatch(doShowUpgradeInstallationError());
 });
 
 ipcRenderer.on('download-progress-update', (e, p) => {

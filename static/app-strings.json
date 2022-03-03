@@ -2291,5 +2291,7 @@
   "Choose View Hosting Limit": "Choose View Hosting Limit",
   "View Hosting Limit (GB)": "View Hosting Limit (GB)",
   "%free% of %total% available": "%free% of %total% available",
+  "Installing, please wait...": "Installing, please wait...",
+  "There was an error during installation. Please, try again.": "There was an error during installation. Please, try again.",
   "--end--": "--end--"
 }
